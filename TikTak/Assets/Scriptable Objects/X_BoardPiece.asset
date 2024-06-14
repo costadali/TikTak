@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54217fef4aa80b543bcb42fe64e49d88, type: 3}
+  m_Name: X_BoardPiece
+  m_EditorClassIdentifier: 
+  <Symbol>k__BackingField: 0
+  piecePrefab: {fileID: 8362925010705215114, guid: bc6026800200c2b4fb187f17e944aa9f,
+    type: 3}
