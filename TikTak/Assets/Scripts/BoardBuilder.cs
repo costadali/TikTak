@@ -1,19 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
+/// <summary>
+/// Uses a tile based grid to build the Tic-Tac-Toe board
+/// </summary>
 public class BoardBuilder : MonoBehaviour
 {
+	[SerializeField] BoardManager boardManager;
 	[SerializeField] TileBase groundTile;
 	[SerializeField] TileBase waterTile;
 	[SerializeField] Tilemap groundTilemap;
 	[SerializeField] Tilemap waterTilemap;
 	int waterTileBuffer = 10; // Just a buffer to make sure that the ground tiles are always surrounded by water to make sure the user doesn't see the edge of the ocean
 
-	void Awake() => GameManager.OnBoardUpdated += BuildBoard;
+	void Awake() => boardManager.OnBoardUpdated += BuildBoard;
 
-	void OnDestroy() => GameManager.OnBoardUpdated -= BuildBoard;
+	void OnDestroy() => boardManager.OnBoardUpdated -= BuildBoard;
 
 	void BuildBoard(int sizeOfBoard)
 	{

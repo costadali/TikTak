@@ -1,10 +1,11 @@
 using DG.Tweening;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
+/// <summary>
+/// I decided to store each piece in a scriptable object in case we want to add more pieces / data for each piece in the future
+/// </summary>
 [CreateAssetMenu(menuName = "BoardPiece")]
-public class BoardPiece : ScriptableObject // I decided to store each piece in a scriptable object in case we want to add more pieces / data for each piece in the future
+public class BoardPiece : ScriptableObject
 {
 	[field: SerializeField] public BoardSymbol Symbol { get; private set; } // This is a nice way of allowing us to set properties within the inspector
 	[SerializeField] GameObject piecePrefab;
